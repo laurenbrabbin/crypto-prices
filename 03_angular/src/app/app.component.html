@@ -1,7 +1,33 @@
 <h1> Crypto Currency Prices </h1>
 
-<price-display from="BTC" to="USD"></price-display>
-<price-display from="ETH" to="USD"></price-display>
-<price-display from="XRP" to="USD"></price-display>
+<table>
+  <tr>
+    <th>Currency</th>
+    <th>BTC</th>
+    <th>ETH</th>
+    <th>XRP</th>
+  </tr> 
+  <tbody>
+    <tr>
+      <td>USD</td>
+      <td><price-display from="BTC" to="USD"></price-display></td>
+      <td><price-display from="ETH" to="USD"></price-display></td>
+      <td><price-display from="XRP" to="USD"></price-display></td>
+    </tr>
+    <tr>
+      <td>GBP</td>
+      <td><price-display from="BTC" to="GBP"></price-display></td>
+      <td><price-display from="ETH" to="GBP"></price-display></td>
+      <td><price-display from="XRP" to="GBP"></price-display></td>
+    </tr>
+    <tr>
+      <td>EUR</td>
+      <td><price-display from="BTC" to="EUR"></price-display></td>
+      <td><price-display from="ETH" to="EUR"></price-display></td>
+      <td><price-display from="XRP" to="EUR"></price-display></td>
+    </tr>
+  </tbody>
+</table>
+
 
 <router-outlet></router-outlet>
