@@ -235,20 +235,28 @@ describe("What is typescript?", () => {
     Uncomment the following tests and make them pass.
   */
 
-  // it("has interfaces 1", () => {
-  //   interface PersonModel {
-  //     setName(name: string): void;
-  //     getName(): string;
-  //   }
-  //
-  //   class Person implements PersonModel {
-  //
-  //   }
-  //
-  //   let person = new Person();
-  //   person.setName("Kay");
-  //   expect(person.getName()).toEqual("Kay");
-  // });
+  it("has interfaces 1", () => {
+    interface PersonModel {
+      setName(name: string): void;
+      getName(): string;
+    }
+  
+    class Person implements PersonModel {
+      name!: string
+
+      setName(name: string):void {
+         this.name = name
+      }
+
+      getName():string {
+        return this.name
+     }
+    }
+  
+    let person = new Person();
+    person.setName("Kay");
+    expect(person.getName()).toEqual("Kay");
+  });
 
   // it("has interfaces 2", () => {
   //   // This is a little trickier.
