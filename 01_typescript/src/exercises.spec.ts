@@ -94,14 +94,14 @@ describe("What is typescript?", () => {
     });
   
 
-  // it("adds type annotations 3", () => {
-  //   function and(a, b) {
-  //     return a && b;
-  //   }
-  //
-  //   expect(and(true, true)).toEqual(true);
-  //   expect(and(true, false)).toEqual(false);
-  // });
+    it("adds type annotations 3", () => {
+      function and(a: boolean, b: boolean) {
+        return a && b;
+      }
+    
+      expect(and(true, true)).toEqual(true);
+      expect(and(true, false)).toEqual(false);
+    });
 
   /*
     We can also use type annotations to describe more complex types, like arrays
