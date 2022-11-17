@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PriceDisplayComponent
+    PriceDisplayComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
