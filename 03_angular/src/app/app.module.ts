@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
+import { PriceTableComponent } from './price-table/price-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PriceDisplayComponent,
-    LineChartComponent
+    LineChartComponent,
+    PriceTableComponent
   ],
   imports: [
     BrowserModule,
