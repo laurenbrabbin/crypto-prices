@@ -37,7 +37,6 @@ export class LineChartComponent {
   createChart(history: any){
     this.chart = new Chart('myChart', {
       type: 'line', //this denotes tha type of chart
-
       data: {
         labels: ['', '', '','', '', '','', '', '', '', '','','', '', '','', '', '','', '', '', '', '',''], 
 	       datasets: [
@@ -47,6 +46,20 @@ export class LineChartComponent {
             backgroundColor: 'pink'
           }, 
         ]
+      },
+      options: {
+        scales: {
+          y: {
+            grid: {
+              display: false
+            }
+          },
+          x: {
+            grid: {
+              display: false
+            }
+          }
+        }
       }
     });
   }
