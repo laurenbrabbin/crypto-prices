@@ -23,8 +23,8 @@ export class HistoryService {
       });
   
       const data = json.Data.Data
-      const prices = data.map(obj => obj.high)
-    return prices;
+      const history = data.map(obj => obj.high)
+    return history;
   }
 
   private async request<T>(url: string, params: { [key: string]: any }): Promise<T> {
