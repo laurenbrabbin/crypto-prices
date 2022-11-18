@@ -26,11 +26,19 @@ export class LineChartComponent {
     });
   }
 
+  reloadHistoryData() {
+    this.historyService.getHistory(this.from, this.to).subscribe(history => {
+      console.log(history)
+      this.chart.config.data.datasets[0].data = history
+      this.chart.update();
+    });
+  }
+
   createChart(history: any){
-    this.chart = new Chart("MyChart", {
+    this.chart = new Chart('myChart', {
       type: 'line', //this denotes tha type of chart
 
-      data: {// values on X-Axis
+      data: {
         labels: ['', '', '','', '', '','', '', '', '', '',''], 
 	       datasets: [
           {
@@ -39,11 +47,12 @@ export class LineChartComponent {
             backgroundColor: 'pink'
           }, 
         ]
-      },
-      options: {
-        aspectRatio:2.5
       }
-      
     });
+  }
+
+  updateChart(labelText: string) {
+    this.from = labelText;
+    this.reloadHistoryData();
   }
 }

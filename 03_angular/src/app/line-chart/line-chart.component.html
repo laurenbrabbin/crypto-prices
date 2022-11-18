@@ -1,5 +1,6 @@
 
 <div class="chart-container">
-      <h3> {{from}} </h3>
-      <canvas  id="MyChart" >{{ chart }}</canvas>
+      <h3> {{from}}/{{to}} </h3>
+      <canvas  id="myChart" >{{ chart }}</canvas>
+      <button (click)="updateChart('ETH')">ETH</button>
 </div>
