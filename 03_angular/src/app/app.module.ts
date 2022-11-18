@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { PriceTableComponent } from './price-table/price-table.component';
-import { HistoryDisplayComponent } from './history-display/history-display.component';
 
 
 @NgModule({
@@ -16,7 +15,6 @@ import { HistoryDisplayComponent } from './history-display/history-display.compo
     PriceDisplayComponent,
     LineChartComponent,
     PriceTableComponent,
-    HistoryDisplayComponent
   ],
   imports: [
     BrowserModule,
