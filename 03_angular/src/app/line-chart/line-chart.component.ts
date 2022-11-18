@@ -39,7 +39,7 @@ export class LineChartComponent {
       type: 'line', //this denotes tha type of chart
 
       data: {
-        labels: ['', '', '','', '', '','', '', '', '', '',''], 
+        labels: ['', '', '','', '', '','', '', '', '', '','','', '', '','', '', '','', '', '', '', '',''], 
 	       datasets: [
           {
             label: "Price",

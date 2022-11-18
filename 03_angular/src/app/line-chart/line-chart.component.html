@@ -2,5 +2,10 @@
 <div class="chart-container">
       <h3> {{from}}/{{to}} </h3>
       <canvas  id="myChart" >{{ chart }}</canvas>
+      <button (click)="updateChart('BTC')">BTC</button>
       <button (click)="updateChart('ETH')">ETH</button>
+      <button (click)="updateChart('XRP')">XRP</button>
+      <button (click)="updateChart('LTC')">LTC</button>
+      <button (click)="updateChart('BCH')">BCH</button>
+      <button (click)="updateChart('ETC')">ETC</button>
 </div>

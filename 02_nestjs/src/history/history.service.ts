@@ -17,7 +17,7 @@ export class HistoryService {
           apiKey: this.configService.get<string>('CRYPTOCOMPARE_API_KEY'),
           fsym: from,
           tsym: to,
-          limit: '12', //number of data points to return
+          limit: '24', //number of data points to return
           aggregate: '1', // time period to look over
         }
       });
