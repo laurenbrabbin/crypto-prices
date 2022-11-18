@@ -1,24 +1,30 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { parse } from 'path';
 import { lastValueFrom, map } from 'rxjs';
 
 @Injectable()
-export class PriceService {
-  static API_ROOT = "https://min-api.cryptocompare.com/data/price";
+export class HistoryService {
+  static API_ROOT = "https://min-api.cryptocompare.com/data/v2/histohour";
 
   constructor(private configService: ConfigService, private http: HttpService) { }
 
-  async getPrice(from: string, to: string): Promise<number> {
-    let json = await this.request<{ [key: string]: number }>(
-      PriceService.API_ROOT, {
+  async priceHistory(from: string, to: string): Promise<any> { //change any to specifc type
+    let json = await this.request<{ [key: string]: any }>(
+      HistoryService.API_ROOT, {
         params: {
           apiKey: this.configService.get<string>('CRYPTOCOMPARE_API_KEY'),
           fsym: from,
-          tsym: to, //currency symbol to convert into
+          tsym: to,
+          limit: '12', //number of data points to return
+          aggregate: '1', // time period to look over
         }
       });
-    return json[to];
+  
+      const data = json.Data.Data
+      const prices = data.map(obj => obj.high)
+    return prices;
   }
 
   private async request<T>(url: string, params: { [key: string]: any }): Promise<T> {
