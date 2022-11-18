@@ -15,7 +15,7 @@ export class PriceService {
         params: {
           apiKey: this.configService.get<string>('CRYPTOCOMPARE_API_KEY'),
           fsym: from,
-          tsym: to, //currency symbol to convert into
+          tsyms: to,
         }
       });
     return json[to];

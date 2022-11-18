@@ -11,7 +11,7 @@ import { ConfigModule } from '@nestjs/config';
     HttpModule,
     ConfigModule.forRoot()
   ],
-  controllers: [PriceController, HistoryController],
-  providers: [PriceService, HistoryService],
+  controllers: [PriceController, HistoryController], // HistoryController
+  providers: [PriceService, HistoryService], // HistoryService
 })
 export class AppModule {}

@@ -11,8 +11,8 @@ export class HistoryService {
 
   constructor(private http: HttpClient) { }
 
-  getHistory(from: string, to: string): Observable<number> {
-    return this.http.get(`${HistoryService.API_URL}/history?from=${from}&to=${to}`)
+  getHistory(from: string, to: string): Observable<any> {
+    return this.http.get(`${HistoryService.API_URL}history?from=${from}&to=${to}`)
       .pipe(map((res: any) => res['history']));
   }
 }
