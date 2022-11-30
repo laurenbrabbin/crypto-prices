@@ -12,8 +12,9 @@ Technologies used:
 
 1. **Displays the price of BTC, ETH, XRP, LTC, BCH, and ETC coins in USD, GBP, EUR, JPY, and ZAR.**  
    Represented as a table with crypto coins along the top currencies along the side.
-
-2. **Displays a small line chart for each coin/currency pair displaying the price history for the past 24 hours.**  
+2. **Price refreshes every 10 seconds**
+   Price will update every 10 seconds without refreshing the page.
+3. **Displays a small line chart for each coin/currency pair displaying the price history for the past 24 hours.**  
    Used Chart.js to create the line charts.
 
 
